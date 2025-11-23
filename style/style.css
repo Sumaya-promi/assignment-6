@@ -1,0 +1,7 @@
+*{
+     font-family: "Poppins", sans-serif;
+}
+.active{
+     background: #15803d;
+     color: white;
+}
