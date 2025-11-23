@@ -11,6 +11,14 @@ const loadAllPlant = () => {
         .then((data) => displayAllPlant(data.plants))
 }
 
+const loadByCategory = (id) => {
+    const url = `https://openapi.programming-hero.com/api/category/${id}`
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) =>displayAllPlant(data.plants)
+        )
+}
+
 const displayAllPlant = (arr) => {
     const plantContainer = document.getElementById('plant-container')
     plantContainer.innerHTML = '';
@@ -49,7 +57,7 @@ const displayCategories = (arr) => {
     arr.forEach((el) => {
         const category = document.createElement('div')
         category.innerHTML = `
-       <h2 id="category-${el.id}" class="p-2 hover:bg-[#15803d] active:bg-[#15803d]  text-[#1f2937] active:text-[#1f2937] hover:text-white ml-4">${el.category_name}</h2>
+       <h2 id="category-${el.id}"  onclick="loadByCategory(${el.id})" class="p-2 hover:bg-[#15803d] active:bg-[#15803d]  text-[#1f2937] active:text-[#1f2937] hover:text-white ml-4">${el.category_name}</h2>
        `
         categoryContainer.appendChild(category)
     })
