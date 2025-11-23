@@ -14,4 +14,4 @@
 
 5 ) Explain template literals in ES6. How are they different from string concatenation?
 => template literals in ES6 is a new way of writing strings where we use back ticks instead of quotes.
-In  template literals we can use variable,multiple line text,expression ,function calls in a line but if we can not do the same in string concatenation.We have to use + for joining string and variables also we cannot call function directly inside quotes.
+In  template literals we can use variable,multiple line text,expression ,function calls in a line but we can not do the same in string concatenation.We have to use + for joining string and variables also we cannot call function directly inside quotes.
